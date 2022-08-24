@@ -28,7 +28,7 @@ struct ContentView: View {
                                 VStack(alignment: .leading, spacing: 6) {
                                     Text(food.name!)
                                         .bold()
-                                    Text("\(Int(food.calories))") + Text("calories").foregroundColor(.orange)
+                                    Text("\(Int(food.calories))") + Text(" calories").foregroundColor(.orange)
                                 }
                                 Spacer()
                                 Text(calcTimeSince(date: food.date!))
@@ -39,18 +39,46 @@ struct ContentView: View {
                     }
                     .onDelete(perform: deleteFood)
                 }
+                .listStyle(.plain)
                 
             }
             .navigationTitle("Calories+")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        shovingAddView.toggle()
+                    } label: {
+                        Label("Add Food", systemImage: "plus.circle")
+                    }
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+            }
+            .sheet(isPresented: $shovingAddView) {
+                AddFoodView()
+            }
         }
+        .navigationViewStyle(.stack)
     }
     
     private func deleteFood(offsets: IndexSet) {
-        // to do
+        withAnimation {
+            offsets.map { food[$0] }.forEach(managedObjectContext.delete)
+            DataManager().save(context: managedObjectContext)
+        }
     }
     
     private func totalDayCalories() -> Double {
-        return 0.0
+        
+        var todayCalories: Double = 0
+        for item in food {
+            if Calendar.current.isDateInToday(item.date!) {
+                todayCalories += item.calories
+            }
+        }
+        
+        return todayCalories
     }
     
 }

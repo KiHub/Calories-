@@ -15,6 +15,7 @@
 		0BCFF74328B5333800F4F5CA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF74228B5333800F4F5CA /* DataManager.swift */; };
 		0BCFF74728B5386600F4F5CA /* AddFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF74628B5386600F4F5CA /* AddFoodView.swift */; };
 		0BCFF74928B53DB300F4F5CA /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF74828B53DB300F4F5CA /* TimeFormatter.swift */; };
+		0BCFF74B28B698C500F4F5CA /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF74A28B698C500F4F5CA /* EditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		0BCFF74228B5333800F4F5CA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0BCFF74628B5386600F4F5CA /* AddFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFoodView.swift; sourceTree = "<group>"; };
 		0BCFF74828B53DB300F4F5CA /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		0BCFF74A28B698C500F4F5CA /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				0BCFF73228B5319D00F4F5CA /* ContentView.swift */,
 				0BCFF74628B5386600F4F5CA /* AddFoodView.swift */,
+				0BCFF74A28B698C500F4F5CA /* EditView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				0BCFF74928B53DB300F4F5CA /* TimeFormatter.swift in Sources */,
 				0BCFF73328B5319D00F4F5CA /* ContentView.swift in Sources */,
 				0BCFF74328B5333800F4F5CA /* DataManager.swift in Sources */,
+				0BCFF74B28B698C500F4F5CA /* EditView.swift in Sources */,
 				0BCFF73128B5319D00F4F5CA /* Calories_App.swift in Sources */,
 				0BCFF74128B5321700F4F5CA /* FoodModel.xcdatamodeld in Sources */,
 			);
